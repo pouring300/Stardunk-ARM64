@@ -1,0 +1,8 @@
+    .section .rodata.guest_elf, "a"
+    .balign 16
+    .global guest_elf_start
+    .global guest_elf_end
+guest_elf_start:
+    .incbin "@GUEST_SO@"
+guest_elf_end:
+    .section .note.GNU-stack, "", %progbits
